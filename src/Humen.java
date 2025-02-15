@@ -4,13 +4,13 @@ public class Humen {
     }
 
     public void setAge(Integer age) {
-        if (age < 0) throw new RuntimeException('Возраст не может быть отрицательным');
+        if ((age < 0) && (age > 18)) throw new RuntimeException('Возраст не может быть отрицательным');
         this.age = age;
     }
 
     private Integer age;
 
     public void showAge() {
-        System.out.println('Возраст животного');
+        System.out.println('Старше 18 лет');
     }
 }
